@@ -2,6 +2,20 @@
   "name": "chatastrophe",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject"
+  },
+  "devDependencies": {
+    "react-app-rewire-emotion": "^4.0.0",
+    "react-app-rewire-hot-loader": "^1.0.1",
+    "react-app-rewired": "^1.5.2",
+    "react-hot-loader": "^4.3.2",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.3.2"
+  },
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -9,14 +23,7 @@
     "emotion": "^9.2.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.3.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "react-router-dom": "^4.3.1"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -29,11 +36,8 @@
         "always"
       ],
       "indent": [
-        "error",
-        2,
-        {
-          "SwitchCase": 1
-        }
+        "off",
+        2
       ],
       "comma-dangle": [
         "error",
