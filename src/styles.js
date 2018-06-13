@@ -1,5 +1,8 @@
-/* Start initial styles */
+import {injectGlobal} from 'emotion';
 
+/* eslint-disable indent */
+injectGlobal`
+/* Start initial styles */
 body {
   height: 100vh;
   background: linear-gradient(to bottom, #FD8271 , #A62824);
@@ -7,6 +10,7 @@ body {
   color: #2f2f2f;
   overflow: hidden;
   margin: 0 8px;
+  padding: 0;
 }
 
 * {
@@ -239,3 +243,4 @@ button.red:focus {
   margin: 5px 0;
   color: red;
 }
+  `;
