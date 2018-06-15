@@ -1,8 +1,8 @@
 import {injectGlobal} from 'emotion';
+import 'semantic-ui-css/semantic.css';
 
 /* eslint-disable indent */
 injectGlobal`
-/* Start initial styles */
 body {
   height: 100vh;
   background: linear-gradient(to bottom, #FD8271 , #A62824);
@@ -38,11 +38,15 @@ body {
 #Header {
   width: 100%;
   height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 1em 0 0 1em;
 }
 
 #Header img {
-  width: 35px;
-  height: 35px;
+  width: 3.5em;
+  height: 3.5em;
   float: left;
 }
 
@@ -55,7 +59,7 @@ body {
   display: block;
   float: left;
   margin-left: 10px;
-  font-size: 1.1em;
+  font-size: 2em;
   margin-top: 7px;
 }
 
@@ -96,15 +100,9 @@ body {
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
-      
-/* End Initial Styles */
 
 #test-image {
   margin-top: 20px;
-}
-
-h1, p {
-  margin: 0;
 }
 
 button, input {
@@ -115,6 +113,22 @@ button, input {
 input {
   border: 1px solid rgba(0,0,0,.2);
   padding: 0 5px;
+}
+
+.ui {  
+  &.primary {
+        &.buttons .button,
+        &.button {
+          background-color: rgb(50, 50, 50);
+
+          .button:hover,
+          .button:focus,
+          &:hover,
+          &:focus {
+            background-color: rgb(175, 175, 175);
+          }
+        }
+      }
 }
 
 button:hover {
@@ -243,4 +257,5 @@ button.red:focus {
   margin: 5px 0;
   color: red;
 }
-  `;
+`;
+/* eslint-enable indent */

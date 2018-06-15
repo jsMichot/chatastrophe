@@ -6,11 +6,7 @@ import LoginContainer from './features/auth/LoginContainer';
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        <LoginContainer />
-      </div>
-    );
+    return <LoginContainer />;
   }
 }
 

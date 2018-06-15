@@ -1,12 +1,20 @@
 import React, {Component} from 'react';
+import {Button, Form, Input} from 'semantic-ui-react';
+
+import AppHeader from '../layout/AppHeader';
 
 export class LoginContainer extends Component {
   render() {
     return (
-      <header id="Header">
-        <h1>Chatastrophe</h1>
-        <img src="assets/icon.png" id="test-image" alt="heart" />
-      </header>
+      <div id="LoginContainer" className="inner-container">
+        <AppHeader />
+        <Form>
+          <span>Log in / Sign up</span>
+          <Input placeholder="Email" />
+          <Input placeholder="Password" type="password" />
+          <Button className="primary">Enter</Button>
+        </Form>
+      </div>
     );
   }
 }
