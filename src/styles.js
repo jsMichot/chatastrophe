@@ -119,13 +119,13 @@ input {
   &.primary {
         &.buttons .button,
         &.button {
-          background-color: rgb(50, 50, 50);
+          background-color: rgba(50, 50, 50, .8);
 
           .button:hover,
           .button:focus,
           &:hover,
           &:focus {
-            background-color: rgb(175, 175, 175);
+            background-color: rgb(75, 75, 75);
           }
         }
       }
