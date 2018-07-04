@@ -1,11 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Chatastrophe",
+  "name": "Chatastrophe",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./assets/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "./assets/icon-256.png"
     }
   ],
   "start_url": "./index.html",
