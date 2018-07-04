@@ -31,14 +31,17 @@ export class LoginContainer extends Component {
     const {email, password} = this.state;
 
     try {
-      const user = await window.firebase
-        .auth()
-        .signInWithEmailAndPassword(email, password);
+      await window.firebase.auth().signInWithEmailAndPassword(email, password);
       this.setState({error: ''});
-      console.log('successful login: ', user);
+      this._handleSuccessfulLogin();
     } catch ({code, message}) {
       if (code === 'auth/user-not-found') {
-        await this._handleSignup();
+        try {
+          await this._handleSignup();
+          this._handleSuccessfulLogin();
+        } catch ({message}) {
+          this.setState({error: message});
+        }
       } else {
         this.setState({error: message});
       }
@@ -54,6 +57,10 @@ export class LoginContainer extends Component {
     } else {
       this.setState({error: 'Please fill in both fields.'});
     }
+  };
+
+  _handleSuccessfulLogin = () => {
+    this.props.history.push('/');
   };
 
   render() {
